@@ -36,11 +36,11 @@ console.log("");
 // 2️⃣
 console.log(`Quel est livre le plus emprunté ?`)
 function compare( a, b ) {
-  if ( a.rented < b.rented ){
-    return 1;
-  }
   if ( a.rented > b.rented ){
     return -1;
+  }
+  if ( a.rented < b.rented ){
+    return 1;
   }
   return 0;
 }
@@ -52,7 +52,7 @@ console.log("");
 
 // 3️⃣
 console.log(`Quel est le livre le moins emprunté ?`)
-function compare( a, b ) {
+function compareBis( a, b ) {
   if ( a.rented < b.rented ){
     return -1;
   }
@@ -62,7 +62,7 @@ function compare( a, b ) {
   return 0;
 }
 
-console.log("Le livre le moins emprunté : " + books.sort( compare )[0].title);
+console.log("Le livre le moins emprunté : " + books.sort( compareBis )[0].title);
 console.log("");
 console.log("--------------------");
 console.log("");
@@ -92,7 +92,7 @@ console.log("");
 // 6️⃣
 console.log(`Les livres par ordre alphabétique:`)
 
-function compare( a, b ) {
+function compareBisBis( a, b ) {
   if ( a.title < b.title ){
     return -1;
   }
@@ -102,5 +102,5 @@ function compare( a, b ) {
   return 0;
 }
 
-console.log(books.sort( compare ));
+console.log(books.sort( compareBisBis ));
 
