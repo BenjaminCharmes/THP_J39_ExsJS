@@ -15,14 +15,14 @@ const books = [
 
 // 1️⃣
 console.log(`Est-ce que tous les livres ont été au moins empruntés une fois ?`)
-let test = 0
+let booksRented = 0
 books.forEach(books => {
   if (books.rented < 1)
   {
-    test++
+    booksRented++
   }
 });
-if (test === 0)
+if (booksRented === 0)
 {
   console.log("Oui !");
 } else {
